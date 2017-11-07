@@ -10,5 +10,5 @@ import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var imgImage: UIImageView!
-  
+  @IBOutlet weak var segueLabel: UILabel!
 }

@@ -16,6 +16,7 @@
 		049716E91FB1875300018973 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049716E81FB1875200018973 /* GoogleService-Info.plist */; };
 		049716EB1FB18CB700018973 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049716EA1FB18CB700018973 /* ImageCollectionViewCell.swift */; };
 		049716ED1FB18CCA00018973 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049716EC1FB18CCA00018973 /* MainViewController.swift */; };
+		049716EF1FB1982900018973 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049716EE1FB1982900018973 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		049716E81FB1875200018973 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		049716EA1FB18CB700018973 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		049716EC1FB18CCA00018973 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		049716EE1FB1982900018973 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		58F761F22A38CE3088756A84 /* Pods-project12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project12.release.xcconfig"; path = "Pods/Target Support Files/Pods-project12/Pods-project12.release.xcconfig"; sourceTree = "<group>"; };
 		839E34FE325C00F21AA3C0B5 /* Pods-project12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project12.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project12/Pods-project12.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE3E50D9513B28BE164BB27 /* Pods_project12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,10 +72,11 @@
 				049716E81FB1875200018973 /* GoogleService-Info.plist */,
 				049716D61FB1806200018973 /* AppDelegate.swift */,
 				049716EC1FB18CCA00018973 /* MainViewController.swift */,
+				049716EE1FB1982900018973 /* DetailViewController.swift */,
 				049716EA1FB18CB700018973 /* ImageCollectionViewCell.swift */,
-				049716D81FB1806200018973 /* ViewController.swift */,
 				049716DA1FB1806200018973 /* Main.storyboard */,
 				049716DD1FB1806200018973 /* Assets.xcassets */,
+				049716D81FB1806200018973 /* ViewController.swift */,
 				049716DF1FB1806200018973 /* LaunchScreen.storyboard */,
 				049716E21FB1806200018973 /* Info.plist */,
 			);
@@ -235,6 +238,7 @@
 			files = (
 				049716EB1FB18CB700018973 /* ImageCollectionViewCell.swift in Sources */,
 				049716D91FB1806200018973 /* ViewController.swift in Sources */,
+				049716EF1FB1982900018973 /* DetailViewController.swift in Sources */,
 				049716D71FB1806200018973 /* AppDelegate.swift in Sources */,
 				049716ED1FB18CCA00018973 /* MainViewController.swift in Sources */,
 			);
