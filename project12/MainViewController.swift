@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   
+  var Durl = URL(string: "http://placehold.it/120x120&text=image1")
+  
+  @IBOutlet weak var testImage: UIImageView!
   @IBOutlet weak var collectionView: UICollectionView!
   
   var tableViewDataSource1stSection : [String] = ["Segue 1", "Segue 2", "Segue 3", "Segue 4", "Segue 5"]
@@ -18,6 +24,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     super.viewDidLoad()
     collectionView.delegate = self
     collectionView.dataSource = self
+    
+    testImage.downloadedFrom(url: Durl!)
     // Do any additional setup after loading the view.
   }
   
@@ -61,6 +69,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     collectionView.deselectItem(at: indexPath, animated: true)
     print("selected: \(indexPath.row)")
   }
+  
   
   /*
    // MARK: - Navigation
