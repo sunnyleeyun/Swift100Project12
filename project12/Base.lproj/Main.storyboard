@@ -67,22 +67,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ps8-wo-Apn">
-                                <rect key="frame" x="67" y="110" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Evi-zD-CKy"/>
-                                    <constraint firstAttribute="height" constant="128" id="Ztl-id-3a2"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ps8-wo-Apn" firstAttribute="leading" secondItem="gJ3-id-Ccr" secondAttribute="leading" constant="67" id="4n9-uO-TGG"/>
                             <constraint firstItem="6HC-Jp-ObV" firstAttribute="trailing" secondItem="gJ3-id-Ccr" secondAttribute="trailing" id="HHb-ts-LDx"/>
                             <constraint firstItem="6HC-Jp-ObV" firstAttribute="leading" secondItem="gJ3-id-Ccr" secondAttribute="leading" id="JE0-sM-nkL"/>
-                            <constraint firstItem="gJ3-id-Ccr" firstAttribute="trailing" secondItem="Ps8-wo-Apn" secondAttribute="trailing" constant="68" id="JGz-yI-7Hn"/>
                             <constraint firstItem="6HC-Jp-ObV" firstAttribute="centerY" secondItem="fkb-zD-0VZ" secondAttribute="centerY" id="JRC-3H-9OH"/>
-                            <constraint firstItem="Ps8-wo-Apn" firstAttribute="top" secondItem="gJ3-id-Ccr" secondAttribute="top" constant="46" id="MwG-er-6v3"/>
                             <constraint firstItem="6HC-Jp-ObV" firstAttribute="centerX" secondItem="fkb-zD-0VZ" secondAttribute="centerX" id="Xll-qo-vWX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gJ3-id-Ccr"/>
@@ -90,7 +80,6 @@
                     <navigationItem key="navigationItem" title="Horizontal Collection" id="X41-Cg-xFJ"/>
                     <connections>
                         <outlet property="collectionView" destination="6HC-Jp-ObV" id="eDd-e8-PAk"/>
-                        <outlet property="testImage" destination="Ps8-wo-Apn" id="wYf-86-dXt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Etg-aE-GD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,8 +127,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ImD-NA-dOC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="116" id="VZN-kG-P9B">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VZN-kG-P9B" id="Lyp-oB-dtR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-8h-wdh">
-                                <rect key="frame" x="150" y="224" width="42" height="21"/>
+                                <rect key="frame" x="166" y="64" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -147,6 +150,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ImD-NA-dOC" firstAttribute="trailing" secondItem="o1N-2e-ZT5" secondAttribute="trailing" id="0QF-2N-uY3"/>
+                            <constraint firstItem="ImD-NA-dOC" firstAttribute="bottom" secondItem="o1N-2e-ZT5" secondAttribute="bottom" id="8OC-B5-AEb"/>
+                            <constraint firstItem="ImD-NA-dOC" firstAttribute="leading" secondItem="o1N-2e-ZT5" secondAttribute="leading" id="AbX-ym-Cf0"/>
+                            <constraint firstItem="ImD-NA-dOC" firstAttribute="top" secondItem="o1N-2e-ZT5" secondAttribute="top" id="VCE-6E-yY0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o1N-2e-ZT5"/>
                     </view>
                     <connections>
@@ -155,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKn-om-lxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="-53"/>
+            <point key="canvasLocation" x="1005.6" y="-53.523238380809602"/>
         </scene>
     </scenes>
 </document>

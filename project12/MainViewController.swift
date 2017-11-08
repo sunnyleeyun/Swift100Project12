@@ -15,17 +15,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
   
   var Durl = URL(string: "http://placehold.it/120x120&text=image1")
   
-  @IBOutlet weak var testImage: UIImageView!
   @IBOutlet weak var collectionView: UICollectionView!
   
-  var tableViewDataSource1stSection : [String] = ["Segue 1", "Segue 2", "Segue 3", "Segue 4", "Segue 5"]
-  var imageArray = [UIImage(named: "1.jpg"), UIImage(named: "1.jpg"), UIImage(named: "1.jpg"), UIImage(named: "1.jpg"), UIImage(named: "1.jpg")]
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.delegate = self
     collectionView.dataSource = self
-    
-    testImage.downloadedFrom(url: Durl!)
     
     
     databaseRef = Database.database().reference()
