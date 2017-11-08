@@ -12,9 +12,11 @@ class DetailViewController: UIViewController {
   
   var sourceViewCellText = ""
   
+  @IBOutlet weak var testLabel: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
     print("Source Cell Text is \(sourceViewCellText)")
+    testLabel.text = sourceViewCellText
     // Do any additional setup after loading the view.
   }
   
@@ -22,6 +24,8 @@ class DetailViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  
   
   
   /*

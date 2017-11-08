@@ -52,30 +52,31 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     return cell
   }
   
-//  override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//    let selectedCell = sender as! ImageCollectionViewCell
-//    let indexPath = collectionView.indexPath(for: selectedCell)
-//    if indexPath?.section == 0 {
-//      return true
-//    } else {
-//      return false
-//    }
-//  }
-//
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if segue.identifier == "detail"{
-//      let selectedCell = sender as! ImageCollectionViewCell
-//      let indexPath = collectionView.indexPath(for: selectedCell)
-//      let destinationViewController = segue.destination as? DetailViewController
-//
-//      destinationViewController?.sourceViewCellText = tableViewDataSource1stSection[(indexPath?.row)!]
-//    }
-//  }
-//
-//  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    collectionView.deselectItem(at: indexPath, animated: true)
-//    print("selected: \(indexPath.row)")
-//  }
+  override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    let selectedCell = sender as! ImageCollectionViewCell
+    let indexPath = collectionView.indexPath(for: selectedCell)
+    if indexPath?.section == 0 {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "detail"{
+      let selectedCell = sender as! ImageCollectionViewCell
+      let indexPath = collectionView.indexPath(for: selectedCell)
+      let destinationViewController = segue.destination as? DetailViewController
+      destinationViewController?.sourceViewCellText = brainList[(indexPath?.item)!].titleName!
+      //destinationViewController?.sourceViewCellText = tableViewDataSource1stSection[(indexPath?.row)!]
+      
+    }
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath, animated: true)
+    print("selected: \(indexPath.item)")
+  }
   
   
   var brainList = [Brain]()

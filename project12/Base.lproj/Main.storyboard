@@ -149,6 +149,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="o1N-2e-ZT5"/>
                     </view>
+                    <connections>
+                        <outlet property="testLabel" destination="Bwb-8h-wdh" id="c2v-jW-B9A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKn-om-lxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
