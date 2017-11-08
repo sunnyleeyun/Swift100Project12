@@ -8,6 +8,6 @@
 
 import Foundation
 class Brain: NSObject{
-  var imageUrl: String? // https://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg
-  var title: String?
+  var titleName: String?
+  var imageUrl: String?
 }
