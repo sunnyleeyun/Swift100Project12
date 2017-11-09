@@ -13,7 +13,6 @@ import FirebaseStorage
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   
-  var Durl = URL(string: "http://placehold.it/120x120&text=image1")
   
   @IBOutlet weak var collectionView: UICollectionView!
   
@@ -64,7 +63,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
       let indexPath = collectionView.indexPath(for: selectedCell)
       let destinationViewController = segue.destination as? DetailViewController
       destinationViewController?.sourceViewCellText = brainList[(indexPath?.item)!].titleName!
-      //destinationViewController?.sourceViewCellText = tableViewDataSource1stSection[(indexPath?.row)!]
       
     }
   }
@@ -101,14 +99,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
       
     })
   }
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  
   
 }
