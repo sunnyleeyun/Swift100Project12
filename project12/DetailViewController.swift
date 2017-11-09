@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
   
   var sourceViewCellText = ""
   
-  @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var testLabel: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()

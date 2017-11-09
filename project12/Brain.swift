@@ -10,4 +10,5 @@ import Foundation
 class Brain: NSObject{
   var titleName: String?
   var imageUrl: String?
+  var detail: String?
 }
