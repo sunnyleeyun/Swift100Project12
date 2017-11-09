@@ -13,12 +13,21 @@ import FirebaseStorage
 
 class DetailViewController: UIViewController {
   
-  var sourceViewCellText = ""
+  var name = ""
+  var url = ""
+  var det = ""
   
   @IBOutlet weak var testLabel: UILabel!
+  @IBOutlet weak var testImage: UIImageView!
+  @IBOutlet weak var testDetail: UITextView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("Source Cell Text is \(sourceViewCellText)")
+    print("Source Cell Text is \(name)")
+    
+    testLabel.text = name
+    testImage.downloadedFrom(url: URL(string: url)!)
+    testDetail.text = det
     //testLabel.text = sourceViewCellText
     
   }

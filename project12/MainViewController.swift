@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     collectionView.dataSource = self
     
     
+    
     databaseRef = Database.database().reference()
     storageRef = Storage.storage().reference()
     
@@ -39,11 +40,29 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCollectionViewCell
     if let imgUrl = URL(string: brainList[indexPath.item].imageUrl!){
       cell.imgImage.downloadedFrom(url: imgUrl)
     }
     cell.segueLabel.text = brainList[indexPath.item].titleName
+    
+    
+
+    cell.contentView.layer.cornerRadius = 10
+    cell.contentView.layer.borderWidth = 1.0
+    
+    cell.contentView.layer.backgroundColor = UIColor.white.cgColor
+    cell.contentView.layer.borderColor = UIColor.clear.cgColor
+    cell.contentView.layer.masksToBounds = true
+    
+    cell.layer.shadowColor = UIColor.gray.cgColor
+    cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+    cell.layer.shadowRadius = 2.0
+    cell.layer.shadowOpacity = 1.0
+    cell.layer.masksToBounds = false
+    cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+    
     return cell
   }
   
@@ -62,8 +81,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
       let selectedCell = sender as! ImageCollectionViewCell
       let indexPath = collectionView.indexPath(for: selectedCell)
       let destinationViewController = segue.destination as? DetailViewController
-      destinationViewController?.sourceViewCellText = brainList[(indexPath?.item)!].titleName!
-      
+      destinationViewController?.name = brainList[(indexPath?.item)!].titleName!
+      destinationViewController?.url = brainList[(indexPath?.item)!].imageUrl!
+      destinationViewController?.det = brainList[(indexPath?.item)!].detail!
+
     }
   }
 
@@ -88,7 +109,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let brain = Brain()
         brain.titleName = dictionary["titleName"] as? String
         brain.imageUrl = dictionary["imageUrl"] as? String
-
+        brain.detail = dictionary["detail"] as? String
+        
         self.brainList.append(brain)
         
         DispatchQueue.main.async {
